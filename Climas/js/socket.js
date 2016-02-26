@@ -69,7 +69,6 @@ $('#estado').html('');
   if( res.temper >=12 || res.temper<=18){    
     if( res.humed <=75 ){    
 
-     
         $('#estado').parent().addClass('panel-success');
         $('#estado').append("OOMICETO Y HONGOS");
         $('#estado').append(' <BR />');
@@ -125,9 +124,6 @@ $('#estado').html('');
 }
   
 
-
-
-
        
  });
 
@@ -152,6 +148,19 @@ $('#estado').html('');
             $('#txtconsola').html('');   
        var texto= $('#txtenvio').val();
         var mensaje = {'origen':'php', 'destino':'consola','ventana':'uno', 'comando':texto};
+        Server.send('message', JSON.stringify(mensaje) );
+
+         
+     });
+
+
+        $("#btnEnviar").click(function(){
+  
+            $('#txtconsola').html('');   
+        var texto= $('#estado').text();
+
+
+        var mensaje = {'origen':'php', 'destino':'consola','texto':texto};
         Server.send('message', JSON.stringify(mensaje) );
 
          

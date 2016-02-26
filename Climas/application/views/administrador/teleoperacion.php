@@ -30,7 +30,7 @@ function ventanaNueva(documento){
 
 </head>
 
-<body >
+<body background-color: #FFCC66;>
 
 
 </TABLE>
@@ -41,8 +41,7 @@ function ventanaNueva(documento){
 				<h1><b>Universidad Técnica de Ambato</b></h1>
 				<h2><b>Facultad de Ingeniería en Sistemas, Electronica e Industrial</b></h2>
 
-				<h3>SISTEMA DE MONITOREO AGRÍCOLA CON TECNOLOGÍA INALÁMBRI-
-CA PARA LA PREVENCIÓN TEMPRANA DE PLAGAS, ENFERMEDADES Y
+				<h3>SISTEMA DE MONITOREO AGRÍCOLA CON TECNOLOGÍA INALÁMBRICA PARA LA PREVENCIÓN TEMPRANA DE PLAGAS, ENFERMEDADES Y
 ALERTAS EN EL CULTIVO DE PAPA EN LA PARROQUIA QUIMIAG DEL
 CANTÓN RIOBAMBA DE LA PROVINCIA DE CHIMBORAZO.”</h3>
 
@@ -151,7 +150,7 @@ CANTÓN RIOBAMBA DE LA PROVINCIA DE CHIMBORAZO.”</h3>
 				<div class="col-lg-5">
 					<div class="panel panel-default">
 						<div class="panel-heading">
-							Estado
+							Resultados Obtenidos
 
 				
 					
@@ -161,6 +160,7 @@ CANTÓN RIOBAMBA DE LA PROVINCIA DE CHIMBORAZO.”</h3>
 				
 										
 						</div>
+						<input type="button" id ='btnEnviar' value="Enviar Resultado" />
 					</div>
 				</div>
 

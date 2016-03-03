@@ -62,7 +62,7 @@ hoy = mm+'/'+dd+'/'+yyyy;
     $('#humedad').val(res.humed);
      $('#estado').html('');
         $('#parametros').parent().addClass('panel-success');
-        
+          
 
 $('#estado').html('');
 
@@ -73,7 +73,7 @@ $('#estado').html('');
         $('#estado').append("OOMICETO Y HONGOS");
         $('#estado').append(' <BR />');
         $('#estado').append(' <BR />');
-        $('#estado').append("10.- Phytophthora infestans Lancha negra, tizón tardío o gota ");
+        $('#estado').append("Phytophthora infestans Lancha negra, tizón tardío o gota ");
  
   }      
 }
@@ -85,11 +85,11 @@ $('#estado').html('');
       $('#estado').append(' <BR />');
      $('#estado').append(' <BR />');
         $('#estado').parent().addClass('panel-success');
-             $('#estado').append("OOMICETO Y HONGOS");
-                    $('#estado').append(' <BR />');
-                    $('#estado').append(' <BR />');
+            // $('#estado').append("OOMICETO Y HONGOS");
+              //      $('#estado').append(' <BR />');
+                //    $('#estado').append(' <BR />');
                 
-        $('#estado').append("12.- Hongo Puccinía pittieriana “Roya”. ");
+        $('#estado').append("Hongo Puccinía pittieriana “Roya”. ");
  
   }      
 }
@@ -99,11 +99,11 @@ $('#estado').html('');
       $('#estado').append(' <BR />');
      $('#estado').append(' <BR />');
         $('#estado').parent().addClass('panel-success');
-             $('#estado').append("BACTERIAS");
-                    $('#estado').append(' <BR />');
-                    $('#estado').append(' <BR />');
+             //$('#estado').append("BACTERIAS");
+               //     $('#estado').append(' <BR />');
+                 //   $('#estado').append(' <BR />');
          
-        $('#estado').append("2.2.- PIE NEGRO O PUDRICIÓN BLANDA.     ");
+        $('#estado').append("PIE NEGRO O PUDRICIÓN BLANDA.     ");
  
   }      
 }
@@ -114,11 +114,11 @@ $('#estado').html('');
      $('#estado').append(' <BR />');
      $('#estado').append(' <BR />');
         $('#estado').parent().addClass('panel-success');
-             $('#estado').append("38.- INSECTOS Y NEMATODOS   ");
-                    $('#estado').append(' <BR />');
+            // $('#estado').append("INSECTOS Y NEMATODOS ");
+              //      $('#estado').append(' <BR />');
 
-                    $('#estado').append(' <BR />');
-        $('#estado').append("40.- Symmetrischema tangolias, Tecia solanivora, Phthorimaea operculella ADULTOS DE POLILLAS O MARIPOSAS  ");
+                //    $('#estado').append(' <BR />');
+        $('#estado').append("Symmetrischema tangolias, Tecia solanivora, Phthorimaea operculella ADULTOS DE POLILLAS O MARIPOSAS  ");
  
   
 }

@@ -36,14 +36,22 @@ function ventanaNueva(documento){
 </TABLE>
 <br>
 <div class="row text-center" >	
-	<div class="panel panel-default">
+	<div class="panel panel-default" >
 			<div class="panel-heading">
-				<h1><b>Universidad Técnica de Ambato</b></h1>
-				<h2><b>Facultad de Ingeniería en Sistemas, Electronica e Industrial</b></h2>
 
-				<h3>SISTEMA DE MONITOREO AGRÍCOLA CON TECNOLOGÍA INALÁMBRICA PARA LA PREVENCIÓN TEMPRANA DE PLAGAS, ENFERMEDADES Y
+			
+			<img src="http://127.0.0.1/Climas/img/38_logos-11.jpg" align="right"  width="260" height="100">
+			<img src="http://127.0.0.1/Climas/img/banderin.png" align="left"  width="100" height="110">
+			<br>
+			<br>
+				<h2><b>Universidad Técnica de Ambato</b></h2>
+				
+				
+				<h3><b>Facultad de Ingeniería en Sistemas, Electronica e Industrial</b></h3>
+
+				<h4>SISTEMA DE MONITOREO AGRÍCOLA CON TECNOLOGÍA INALÁMBRICA PARA LA PREVENCIÓN TEMPRANA DE PLAGAS, ENFERMEDADES Y
 ALERTAS EN EL CULTIVO DE PAPA EN LA PARROQUIA QUIMIAG DEL
-CANTÓN RIOBAMBA DE LA PROVINCIA DE CHIMBORAZO.”</h3>
+CANTÓN RIOBAMBA DE LA PROVINCIA DE CHIMBORAZO.”</h4>
 
 <br>
 <br>
@@ -136,7 +144,10 @@ CANTÓN RIOBAMBA DE LA PROVINCIA DE CHIMBORAZO.”</h3>
 
 					
 					</div>
-						<input type="button" id ='btnAbrir' value="Grafica estadistica" onclick="ventanaNueva('http://127.0.0.1/test/drawchart.php')" />
+						<input type="button" id ='btnAbrir' value="Grafica Temperatura" onclick="ventanaNueva('http://127.0.0.1/test/temperatura.php')" />
+						<input type="button" id ='btnAbrir' value="Grafica 	Humedad" onclick="ventanaNueva('http://127.0.0.1/test/humedad.php')" />
+						<input type="button" id ='btnAbrir' value="Grafica Luz" onclick="ventanaNueva('http://127.0.0.1/test/luz.php')" />
+						
 						
 				</div>
 			</div>

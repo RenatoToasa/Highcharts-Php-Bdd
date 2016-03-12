@@ -37,19 +37,19 @@ function ventanaNueva(documento){
 <br>
 <div class="row text-center" >	
 	<div class="panel panel-default" >
-			<div class="panel-heading">
+			<div class="panel-heading" style="background:#133A3A">
 
 			
-			<img src="http://127.0.0.1/Climas/img/38_logos-11.jpg" align="right"  width="260" height="100">
-			<img src="http://127.0.0.1/Climas/img/banderin.png" align="left"  width="100" height="110">
+			<img src="http://212.231.132.41/Climas/img/38_logos-11.jpg" align="right"  width="260" height="100">
+			<img src="http://212.231.132.41/Climas/img/banderin.png" align="left"  width="100" height="110">
 			<br>
 			<br>
-				<h2><b>Universidad Técnica de Ambato</b></h2>
+				<h2 span style="color:#FCFAFA"><b>Universidad Técnica de Ambato</b></h2>
 				
 				
-				<h3><b>Facultad de Ingeniería en Sistemas, Electronica e Industrial</b></h3>
+				<h3 span style="color:#FCFAFA" ><b>Facultad de Ingeniería en Sistemas, Electronica e Industrial</b></h3>
 
-				<h4>SISTEMA DE MONITOREO AGRÍCOLA CON TECNOLOGÍA INALÁMBRICA PARA LA PREVENCIÓN TEMPRANA DE PLAGAS, ENFERMEDADES Y
+				<h4 span style="color:#FCFAFA" >SISTEMA DE MONITOREO AGRÍCOLA CON TECNOLOGÍA INALÁMBRICA PARA LA PREVENCIÓN TEMPRANA DE PLAGAS, ENFERMEDADES Y
 ALERTAS EN EL CULTIVO DE PAPA EN LA PARROQUIA QUIMIAG DEL
 CANTÓN RIOBAMBA DE LA PROVINCIA DE CHIMBORAZO.”</h4>
 
@@ -144,9 +144,9 @@ CANTÓN RIOBAMBA DE LA PROVINCIA DE CHIMBORAZO.”</h4>
 
 					
 					</div>
-						<input type="button" id ='btnAbrir' value="Grafica Temperatura" onclick="ventanaNueva('http://127.0.0.1/test/temperatura.php')" />
-						<input type="button" id ='btnAbrir' value="Grafica 	Humedad" onclick="ventanaNueva('http://127.0.0.1/test/humedad.php')" />
-						<input type="button" id ='btnAbrir' value="Grafica Luz" onclick="ventanaNueva('http://127.0.0.1/test/luz.php')" />
+						<input type="button" id ='btnAbrir' value="Grafica Temperatura" onclick="ventanaNueva('/test/temperatura.php')" />
+					<input type="button" id ='btnAbrir' value="Grafica Humedad" onclick="ventanaNueva('/test/humedad.php')" />
+						<input type="button" id ='btnAbrir' value="Grafica Luz" onclick="ventanaNueva('/test/luz.php')" />
 						
 						
 				</div>
@@ -171,7 +171,7 @@ CANTÓN RIOBAMBA DE LA PROVINCIA DE CHIMBORAZO.”</h4>
 				
 										
 						</div>
-						<input type="button" id ='btnEnviar' value="Enviar Resultado" />
+				
 					</div>
 				</div>
 

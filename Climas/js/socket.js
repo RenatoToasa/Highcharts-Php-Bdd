@@ -1,6 +1,6 @@
   $(document).ready(function() {
       console.log('Connecting...');
-      Server = new FancyWebSocket('ws://192.168.0.11:9300');
+      Server = new FancyWebSocket('ws://212.231.132.41:9300');
 
 
       //Let the user know we're connected
@@ -60,7 +60,7 @@ hoy = mm+'/'+dd+'/'+yyyy;
     $('#fecha').val(hoy);
     $('#luz').val(res.luz);
     $('#humedad').val(res.humed);
-     $('#estado').html('');
+  //   $('#estado').html('');
         $('#parametros').parent().addClass('panel-success');
           
 
@@ -70,10 +70,10 @@ $('#estado').html('');
     if( res.humed <=75 ){    
 
         $('#estado').parent().addClass('panel-success');
-        $('#estado').append("OOMICETO Y HONGOS");
+ //       $('#estado').append("OOMICETO Y HONGOS");
         $('#estado').append(' <BR />');
         $('#estado').append(' <BR />');
-        $('#estado').append("Phytophthora infestans Lancha negra, tizón tardío o gota ");
+        $('#estado').append("Phytophthora infestans Lancha negra, tizon tardio o gota ");
  
   }      
 }
@@ -89,7 +89,7 @@ $('#estado').html('');
               //      $('#estado').append(' <BR />');
                 //    $('#estado').append(' <BR />');
                 
-        $('#estado').append("Hongo Puccinía pittieriana “Roya”. ");
+        $('#estado').append("Hongo Puccinia pittieriana “Roya”. ");
  
   }      
 }
@@ -103,7 +103,7 @@ $('#estado').html('');
                //     $('#estado').append(' <BR />');
                  //   $('#estado').append(' <BR />');
          
-        $('#estado').append("PIE NEGRO O PUDRICIÓN BLANDA.     ");
+        $('#estado').append("PIE NEGRO O PUDRICION BLANDA ");
  
   }      
 }
@@ -118,13 +118,24 @@ $('#estado').html('');
               //      $('#estado').append(' <BR />');
 
                 //    $('#estado').append(' <BR />');
-        $('#estado').append("Symmetrischema tangolias, Tecia solanivora, Phthorimaea operculella ADULTOS DE POLILLAS O MARIPOSAS  ");
+        $('#estado').append("Symmetrischema tangolias, Tecia solanivora, Phthorimaea operculella ADULTOS DE POLILLAS O MARIPOSAS");
  
   
 }
   
+	
+    $('#txtconsola').html('');   
+        var texto= $('#estado').text();
 
-       
+	if (texto.length!=0){
+        var mensaje = {'origen':'php', 'destino':'juanito','texto':texto};
+        Server.send('message', JSON.stringify(mensaje) );
+  }
+        
+ 
+  
+
+   
  });
 
 

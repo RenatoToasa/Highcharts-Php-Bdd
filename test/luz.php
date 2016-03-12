@@ -2,7 +2,7 @@
  function conectarBD(){ 
             $server = "localhost";
             $usuario = "root";
-            $pass = "utafisei";
+            $pass = "hunterhacker";
             $BD = "datos";
             //variable que guarda la conexión de la base de datos
             $conexion = mysqli_connect($server, $usuario, $pass, $BD); 
@@ -97,7 +97,7 @@ $(function () {
                 }
             },
             title: {
-                text: 'Clima'
+                text: 'Grafica de Luz'
             },
             xAxis: {
                 type: 'datetime',
@@ -105,7 +105,7 @@ $(function () {
             },
             yAxis: {
                 title: {
-                    text: 'Value'
+                    text: 'Valores de luz'
                 },
                 plotLines: [{
                     value: 0,

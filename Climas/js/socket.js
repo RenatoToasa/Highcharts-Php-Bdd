@@ -108,7 +108,7 @@ $('#estado').html('');
   }      
 }
   
- if( res.temper == 20){    
+ if( res.temper == 0,01){    
     
 
      $('#estado').append(' <BR />');
@@ -122,6 +122,114 @@ $('#estado').html('');
  
   
 }
+
+
+
+ if( res.luz == 0.01){    
+    
+
+     $('#estado').append(' <BR />');
+     $('#estado').append(' <BR />');
+        $('#estado').parent().addClass('panel-success');
+            // $('#estado').append("INSECTOS Y NEMATODOS ");
+              //      $('#estado').append(' <BR />');
+
+                //    $('#estado').append(' <BR />');
+        $('#estado').append("Cielo nocturno despejado, cuarto creciente o menguante");
+ 
+  
+}
+
+
+ if( res.luz == 0.25){    
+    
+
+     $('#estado').append(' <BR />');
+     $('#estado').append(' <BR />');
+        $('#estado').parent().addClass('panel-success');
+            // $('#estado').append("INSECTOS Y NEMATODOS ");
+              //      $('#estado').append(' <BR />');
+
+                //    $('#estado').append(' <BR />');
+        $('#estado').append("Luna llena en una noche despejada");
+ 
+  
+}
+
+
+ if( res.luz == 1){    
+    
+
+     $('#estado').append(' <BR />');
+     $('#estado').append(' <BR />');
+        $('#estado').parent().addClass('panel-success');
+            // $('#estado').append("INSECTOS Y NEMATODOS ");
+              //      $('#estado').append(' <BR />');
+
+                //    $('#estado').append(' <BR />');
+        $('#estado').append("Luna llena a gran altitud en latitudes tropicales");
+ 
+  
+}
+
+
+
+ if( res.luz == 3){    
+    
+
+     $('#estado').append(' <BR />');
+     $('#estado').append(' <BR />');
+        $('#estado').parent().addClass('panel-success');
+            // $('#estado').append("INSECTOS Y NEMATODOS ");
+              //      $('#estado').append(' <BR />');
+
+                //    $('#estado').append(' <BR />');
+        $('#estado').append("Límite oscuro del crepúsculo bajo un cielo despejado");
+ 
+  
+}
+
+
+ if( res.luz == 32000){    
+    
+
+     $('#estado').append(' <BR />');
+     $('#estado').append(' <BR />');
+        $('#estado').parent().addClass('panel-success');
+            // $('#estado').append("INSECTOS Y NEMATODOS ");
+              //      $('#estado').append(' <BR />');
+
+                //    $('#estado').append(' <BR />');
+        $('#estado').append("Luz solar en un día medio (mín.)");
+ 
+  
+}
+
+
+ if( res.luz == 100000){    
+    
+
+     $('#estado').append(' <BR />');
+     $('#estado').append(' <BR />');
+        $('#estado').parent().addClass('panel-success');
+            // $('#estado').append("INSECTOS Y NEMATODOS ");
+              //      $('#estado').append(' <BR />');
+
+                //    $('#estado').append(' <BR />');
+        $('#estado').append("Luz solar en un día medio (máx.)");
+ 
+  
+}
+
+
+
+
+
+
+
+
+
+
   
 	
     $('#txtconsola').html('');   
@@ -141,42 +249,6 @@ $('#estado').html('');
 
     //Administracion Consola
        
-        $("#btnConectar").click(function(){
-   //      if( res.cliente==="consola"){  
-    
-
-        var mensaje = {'origen':'php', 'destino':'consola','accion':'conectar', 'ventana':'uno'};
-        Server.send('message', JSON.stringify(mensaje) );
-          $('#tiempo').html('');
-        $('#tiempo').parent().addClass('panel-success');
-        $('#tiempo').append(i);  
-
-  
-     });
-
-        $("#btnejecutar").click(function(){
-  
-            $('#txtconsola').html('');   
-       var texto= $('#txtenvio').val();
-        var mensaje = {'origen':'php', 'destino':'consola','ventana':'uno', 'comando':texto};
-        Server.send('message', JSON.stringify(mensaje) );
-
-         
-     });
-
-
-        $("#btnEnviar").click(function(){
-  
-            $('#txtconsola').html('');   
-        var texto= $('#estado').text();
-
-
-        var mensaje = {'origen':'php', 'destino':'consola','texto':texto};
-        Server.send('message', JSON.stringify(mensaje) );
-
-         
-     });
-
 
 
 /*

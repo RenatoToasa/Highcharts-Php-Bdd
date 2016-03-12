@@ -73,7 +73,8 @@ $('#estado').html('');
  //       $('#estado').append("OOMICETO Y HONGOS");
         $('#estado').append(' <BR />');
         $('#estado').append(' <BR />');
-        $('#estado').append("Phytophthora infestans Lancha negra, tizon tardio o gota ");
+        $('#envio').append("Lancha negra, tizon tardio o gota ");
+        $('#estado').append("10.-Phytophthora infestans Lancha negra, tizón tardío o gota ");
  
   }      
 }
@@ -89,7 +90,9 @@ $('#estado').html('');
               //      $('#estado').append(' <BR />');
                 //    $('#estado').append(' <BR />');
                 
-        $('#estado').append("Hongo Puccinia pittieriana “Roya”. ");
+        $('#envio').append("Roya");
+        $('#estado').append("12.- Hongo Puccinía pittieriana Roya");
+
  
   }      
 }
@@ -103,12 +106,13 @@ $('#estado').html('');
                //     $('#estado').append(' <BR />');
                  //   $('#estado').append(' <BR />');
          
-        $('#estado').append("PIE NEGRO O PUDRICION BLANDA ");
+        $('#estado').append("2.2.- PIE NEGRO O PUDRICIÓN BLANDA.");
+         $('#envio').append("Pie Negro");
  
   }      
 }
   
- if( res.temper == 0,01){    
+ if( res.temper === 20){    
     
 
      $('#estado').append(' <BR />');
@@ -118,7 +122,8 @@ $('#estado').html('');
               //      $('#estado').append(' <BR />');
 
                 //    $('#estado').append(' <BR />');
-        $('#estado').append("Symmetrischema tangolias, Tecia solanivora, Phthorimaea operculella ADULTOS DE POLILLAS O MARIPOSAS");
+        $('#estado').append("40.- Symmetrischema tangolias, Tecia solanivora, Phthorimaea operculella ADULTOS DE POLILLAS O MARIPOSAS ");
+         $('#envio').append("Polillas o Mariposas");
  
   
 }

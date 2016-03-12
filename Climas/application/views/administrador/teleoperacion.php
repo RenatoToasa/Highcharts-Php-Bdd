@@ -178,6 +178,31 @@ CANTÓN RIOBAMBA DE LA PROVINCIA DE CHIMBORAZO.”</h4>
 
 
 
+<br>
+<br>
+
+<div class="row"  style='display:none;'>
+				<div class="col-lg-5"  style='display:none;'>
+					<div class="panel panel-default"  style='display:none;'>
+						<div class="panel-heading"  style='display:none;'>
+							Resultados enviados
+
+				
+					
+						</div>
+						<div class="panel-body" id='envio' name = 'envio'  style='display:none;'>	
+
+				
+										
+						</div>
+				
+					</div>
+				</div>
+
+
+
+
+
 		</div>
 	</div>
 </div>

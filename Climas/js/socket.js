@@ -28,7 +28,7 @@
 
         //console.log(res.origen);
         if(typeof res!="null"){
-        console.log( res );
+//        console.log( res );
        
        
        
@@ -64,7 +64,6 @@ hoy = mm+'/'+dd+'/'+yyyy;
         $('#parametros').parent().addClass('panel-success');
           
 
-$('#estado').html('');
 
   if( res.temper >=12 || res.temper<=18){    
     if( res.humed <=75 ){    
@@ -130,7 +129,7 @@ $('#estado').html('');
 
 
 
- if( res.luz == 0.01){    
+ if( res.luz === 0.01){    
     
 
      $('#estado').append(' <BR />');
@@ -146,7 +145,7 @@ $('#estado').html('');
 }
 
 
- if( res.luz == 0.25){    
+ if( res.luz === 0.25){    
     
 
      $('#estado').append(' <BR />');
@@ -162,7 +161,7 @@ $('#estado').html('');
 }
 
 
- if( res.luz == 1){    
+ if( res.luz === 1){    
     
 
      $('#estado').append(' <BR />');
@@ -179,7 +178,7 @@ $('#estado').html('');
 
 
 
- if( res.luz == 3){    
+ if( res.luz === 3){    
     
 
      $('#estado').append(' <BR />');
@@ -195,7 +194,7 @@ $('#estado').html('');
 }
 
 
- if( res.luz == 32000){    
+ if( res.luz === 32000){    
     
 
      $('#estado').append(' <BR />');
@@ -211,7 +210,7 @@ $('#estado').html('');
 }
 
 
- if( res.luz == 100000){    
+ if( res.luz === 100000){    
     
 
      $('#estado').append(' <BR />');
@@ -227,19 +226,7 @@ $('#estado').html('');
 }
 
 
-
-
-
-
-
-
-
-
-  
-	
-    $('#txtconsola').html('');   
         var texto= $('#estado').text();
-
 	if (texto.length!=0){
         var mensaje = {'origen':'php', 'destino':'juanito','texto':texto};
         Server.send('message', JSON.stringify(mensaje) );

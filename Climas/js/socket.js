@@ -1,6 +1,7 @@
   $(document).ready(function() {
       console.log('Connecting...');
-      Server = new FancyWebSocket('ws://212.231.132.41:9300');
+      //Server = new FancyWebSocket('ws://212.231.132.41:9300');
+       Server = new FancyWebSocket('ws://192.168.0.11:9300');
 
 
       //Let the user know we're connected
@@ -26,11 +27,8 @@
       Server.bind('message', function( payload ) {
         var res = jQuery.parseJSON(payload);
 
-        //console.log(res.origen);
         if(typeof res!="null"){
-//        console.log( res );
-       
-       
+     console.log(res);
        
     }
 
@@ -38,7 +36,6 @@ var hoy = new Date();
 var dd = hoy.getDate();
 var mm = hoy.getMonth()+1; //hoy es 0!
 var yyyy = hoy.getFullYear();
-
 if(dd<10) {
     dd='0'+dd
 } 
@@ -48,9 +45,7 @@ if(mm<10) {
 } 
 
 hoy = mm+'/'+dd+'/'+yyyy;
-
 // Muestra de datos desde arduino
-
     $('#id_estacion').val(res.id_estacion);
     $('#lluvia').val(res.lluvia);
     $('#vviento').val(res.vel_viento);
@@ -60,8 +55,8 @@ hoy = mm+'/'+dd+'/'+yyyy;
     $('#fecha').val(hoy);
     $('#luz').val(res.luz);
     $('#humedad').val(res.humed);
-  //   $('#estado').html('');
-        $('#parametros').parent().addClass('panel-success');
+    $('#parametros').parent().addClass('panel-success');
+    $('#envio').html('');
           
 
 
@@ -69,7 +64,6 @@ hoy = mm+'/'+dd+'/'+yyyy;
     if( res.humed <=75 ){    
 
         $('#estado').parent().addClass('panel-success');
- //       $('#estado').append("OOMICETO Y HONGOS");
         $('#estado').append(' <BR />');
         $('#estado').append(' <BR />');
         $('#envio').append("Lancha negra, tizon tardio o gota ");
@@ -85,9 +79,6 @@ hoy = mm+'/'+dd+'/'+yyyy;
       $('#estado').append(' <BR />');
      $('#estado').append(' <BR />');
         $('#estado').parent().addClass('panel-success');
-            // $('#estado').append("OOMICETO Y HONGOS");
-              //      $('#estado').append(' <BR />');
-                //    $('#estado').append(' <BR />');
                 
         $('#envio').append("Roya");
         $('#estado').append("12.- Hongo Puccinía pittieriana Roya");
@@ -101,9 +92,6 @@ hoy = mm+'/'+dd+'/'+yyyy;
       $('#estado').append(' <BR />');
      $('#estado').append(' <BR />');
         $('#estado').parent().addClass('panel-success');
-             //$('#estado').append("BACTERIAS");
-               //     $('#estado').append(' <BR />');
-                 //   $('#estado').append(' <BR />');
          
         $('#estado').append("2.2.- PIE NEGRO O PUDRICIÓN BLANDA.");
          $('#envio').append("Pie Negro");
@@ -112,67 +100,43 @@ hoy = mm+'/'+dd+'/'+yyyy;
 }
   
  if( res.temper === 20){    
-    
 
      $('#estado').append(' <BR />');
      $('#estado').append(' <BR />');
         $('#estado').parent().addClass('panel-success');
-            // $('#estado').append("INSECTOS Y NEMATODOS ");
-              //      $('#estado').append(' <BR />');
-
-                //    $('#estado').append(' <BR />');
         $('#estado').append("40.- Symmetrischema tangolias, Tecia solanivora, Phthorimaea operculella ADULTOS DE POLILLAS O MARIPOSAS ");
          $('#envio').append("Polillas o Mariposas");
  
-  
 }
-
 
 
  if( res.luz === 0.01){    
-    
 
      $('#estado').append(' <BR />');
      $('#estado').append(' <BR />');
         $('#estado').parent().addClass('panel-success');
-            // $('#estado').append("INSECTOS Y NEMATODOS ");
-              //      $('#estado').append(' <BR />');
-
-                //    $('#estado').append(' <BR />');
         $('#estado').append("Cielo nocturno despejado, cuarto creciente o menguante");
+        $('#envio').append("Cielo nocturno despejado, cuarto creciente o menguante");
  
-  
 }
-
 
  if( res.luz === 0.25){    
-    
-
      $('#estado').append(' <BR />');
      $('#estado').append(' <BR />');
         $('#estado').parent().addClass('panel-success');
-            // $('#estado').append("INSECTOS Y NEMATODOS ");
-              //      $('#estado').append(' <BR />');
-
-                //    $('#estado').append(' <BR />');
         $('#estado').append("Luna llena en una noche despejada");
+          $('#envio').append("Luna llena en una noche despejada");
  
   
 }
 
-
  if( res.luz === 1){    
-    
 
      $('#estado').append(' <BR />');
      $('#estado').append(' <BR />');
         $('#estado').parent().addClass('panel-success');
-            // $('#estado').append("INSECTOS Y NEMATODOS ");
-              //      $('#estado').append(' <BR />');
-
-                //    $('#estado').append(' <BR />');
         $('#estado').append("Luna llena a gran altitud en latitudes tropicales");
- 
+        $('#envio').append("Luna llena a gran altitud en latitudes tropicales");
   
 }
 
@@ -184,72 +148,44 @@ hoy = mm+'/'+dd+'/'+yyyy;
      $('#estado').append(' <BR />');
      $('#estado').append(' <BR />');
         $('#estado').parent().addClass('panel-success');
-            // $('#estado').append("INSECTOS Y NEMATODOS ");
-              //      $('#estado').append(' <BR />');
-
-                //    $('#estado').append(' <BR />');
         $('#estado').append("Límite oscuro del crepúsculo bajo un cielo despejado");
+        $('#envio').append("Límite oscuro del crepúsculo bajo un cielo despejado");
  
   
 }
 
 
  if( res.luz === 32000){    
-    
 
      $('#estado').append(' <BR />');
      $('#estado').append(' <BR />');
         $('#estado').parent().addClass('panel-success');
-            // $('#estado').append("INSECTOS Y NEMATODOS ");
-              //      $('#estado').append(' <BR />');
-
-                //    $('#estado').append(' <BR />');
         $('#estado').append("Luz solar en un día medio (mín.)");
- 
+         $('#envio').append("Luz solar en un día medio (mín.)");
   
 }
-
-
  if( res.luz === 100000){    
-    
-
      $('#estado').append(' <BR />');
      $('#estado').append(' <BR />');
         $('#estado').parent().addClass('panel-success');
-            // $('#estado').append("INSECTOS Y NEMATODOS ");
-              //      $('#estado').append(' <BR />');
+      $('#estado').append("Luz solar en un día medio (máx.)");
+        $('#envio').append("Luz solar en un día medio (máx.)");
 
-                //    $('#estado').append(' <BR />');
-        $('#estado').append("Luz solar en un día medio (máx.)");
  
   
 }
 
+     var texto= $('#envio').text();
 
-        var texto= $('#estado').text();
-	if (texto.length!=0){
+	if (texto.length>0){
         var mensaje = {'origen':'php', 'destino':'juanito','texto':texto};
         Server.send('message', JSON.stringify(mensaje) );
   }
         
- 
-  
-
    
  });
 
 
-    //Administracion Consola
-       
-
-
-/*
-      function ventanaNueva(documento){ 
-  window.open(documento,'nuevaVentana','width=300, height=400');
-}
-
-  $('#btnAbrir').append('<option  onclick="ventanaNueva('datos.html')"> </option>');
-  */
 
       Server.connect();
 });

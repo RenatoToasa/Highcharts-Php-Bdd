@@ -26,6 +26,12 @@ function ventanaNueva(documento){
 	window.open(documento,'nuevaVentana','width=500, height=500, top=200,left=400');
 }
 
+function ventanaNueva1(documento1){
+        window.open(documento1,'nuevaVentana1');
+}
+
+
+
 </script>
 
 </head>
@@ -148,7 +154,7 @@ CANTÓN RIOBAMBA DE LA PROVINCIA DE CHIMBORAZO.”</h4>
 					<input type="button" id ='btnAbrir' value="Grafica Humedad" onclick="ventanaNueva('/test/humedad.php')" />
 						<input type="button" id ='btnAbrir' value="Grafica Luz" onclick="ventanaNueva('/test/luz.php')" />
 						
-						
+					<input type="button" id ='btnAbrir' value="Consulta de Registros" onclick="ventanaNueva1('/Consulta/index.html')" />	
 				</div>
 			</div>
 

@@ -39,7 +39,7 @@ function ventanaNueva1(documento1){
 <body background-color: #FFCC66;>
 
 
-</TABLE>
+
 <br>
 <div class="row text-center" >	
 	<div class="panel panel-default" >
@@ -61,7 +61,7 @@ CANTÓN RIOBAMBA DE LA PROVINCIA DE CHIMBORAZO.”</h4>
 
 <br>
 <br>
-		<div class="col-lg-6">
+		<div class="col-lg-3">
 				<div class="panel panel-default">
 					<div class="panel-heading">
 						 	Paramétros 
@@ -70,30 +70,25 @@ CANTÓN RIOBAMBA DE LA PROVINCIA DE CHIMBORAZO.”</h4>
 
 					<TABLE BORDER="1" >
 
+
 						<tr>
 						  <td><strong>Parametro</strong></td>
-						  <td><strong>Valor</strong></td>
-						  
+						  <td><strong>Valor</strong></td>						  
 						</tr>
+
 						 <tr>
 						  <td>Id Estacion</td>
-						  <td>
-						  	<input type="text" name="id_estacion" id ='id_estacion'>
-						  </td>
-						  
+						  <td>	<input type="text" name="id_estacion" id ='id_estacion'> </td>						  
 						</tr>
+						
 						<tr>
 						  <td>Luvia</td>
-						  <td>
-						  	<input type="text" name="lluvia" id ='lluvia'>
-						  </td>
-						  
+						  <td>  	<input type="text" name="lluvia" id ='lluvia'>	  </td>						  
 						</tr>
 						 
-						<tr>
+						<tr>						
 						  <td>Velocidad de Viento </td>
-						  <td><input type="text" name="vviento" id ='vviento'></td>
-						  
+						  <td><input type="text" name="vviento" id ='vviento'></td>			  
 						</tr>
 						 
 						<tr>
@@ -103,11 +98,10 @@ CANTÓN RIOBAMBA DE LA PROVINCIA DE CHIMBORAZO.”</h4>
 						  </td>
 						  
 						</tr>
-							<tr>
+
+						<tr>
 						  <td>Temperatura</td>
-						  <td>
-							<input type="text" name="temperatura" id ='temperatura'>
-						  </td>
+						  <td><input type="text" name="temperatura" id ='temperatura'>  </td>
 						  
 						</tr>
 				
@@ -159,12 +153,72 @@ CANTÓN RIOBAMBA DE LA PROVINCIA DE CHIMBORAZO.”</h4>
 			</div>
 
 
+<div class="row">
+				<div class="col-lg-4">
+					<div class="panel panel-default">
+						<div class="panel-heading">
+												Datos Obtenidos por el INIAP Y MAGAP
+					
+						</div>
+						<div class="panel-body" id='estado' name = 'estado' style="height:377px;border:1px solid #ccc;font:16px/26px ;overflow:auto;">	
+
+						<h4>OMICETO Y HONGOS	</h4>						
+<strong>10.- Phytophthora infestans "Lancha negra, tizón tardío o gota"</strong>
+<P align="left"> <strong>TEMPERATURA:</strong> 	12 ºC min 	18ºC max	</p>
+
+
+<P align="left"> <strong>HUMEDAD RELATIVA:</strong> 	75%		</p>
+<P align="left"> <strong>TIEMPO DE DESARROLLO:</strong>	De 2 a 5 dias para el desarrollo de la plaga y 7 dias para presentar sintomas	</p>
+<P align="left"> <strong>HUMEDAD RELATIVA:</strong>	75%		</p>
+<P align="left"> <strong>ESTADO DEL DIA:</strong>	Con presencia de luz solar		</p>
+
+
+
+<br>
+
+
+<strong>					12.- Hongo Puccinía pittieriana “Roya”.</strong>
+
+
+<P align="left"> <strong>TEMPERATURA:</strong> 	10º C min 	14º C max	</p>
+
+
+<P align="left"> <strong>HUMEDAD RELATIVA:</strong> 	75%		</p>
+<P align="left"> <strong>TIEMPO DE DESARROLLO:</strong>	12 a mas horas continuas de humedad </p>
+<P align="left"> <strong>HUMEDAD RELATIVA:</strong>	75%		</p>
+<P align="left"> <strong>ESTADO DEL DIA:</strong>	Sin sol		</p>
+
+<br>
+
+			<h4>BACTERIAS	</h4>	
+<strong>2.2.- Pie negro o pudrición blanda.</strong>
+<P align="left"> <strong>TEMPERATURA:</strong> 	10º C min 	14º C max	</p>
+<P align="left"> <strong>HUMEDAD RELATIVA:</strong> 	75%		</p>
+<P align="left"> <strong>TIEMPO DE DESARROLLO:</strong>	12 a mas horas continuas de humedad </p>
+<P align="left"> <strong>ESTADO DEL DIA:</strong>	Sin sol		</p>
+
+<br>	
+
+<h4>INSECTOS Y NEMÁTODOS	</h4>	
+<strong>40.- Symmetrischema tangolias, Tecia solanivora, Phthorimaea operculella ADULTOS DE POLILLAS O MARIPOSAS</strong>
+<P align="left"> <strong>TEMPERATURA:</strong> 	20° C </p>
+<P align="left"> <strong>HUMEDAD RELATIVA:</strong> 	Baja	</p>
+<P align="left"> <strong>TIEMPO DE DESARROLLO:</strong>	Varia según el sector</p>
+<P align="left"> <strong>ESTADO DEL DIA:</strong>	Poco sol		</p>
+
+
+						</div>
+				
+					</div>
+				</div>
+
+
 
 
 
 
 <div class="row">
-				<div class="col-lg-5">
+				<div class="col-lg-4">
 					<div class="panel panel-default">
 						<div class="panel-heading">
 							Resultados Obtenidos

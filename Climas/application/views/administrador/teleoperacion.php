@@ -159,11 +159,25 @@ echo "<tr>
 
 					
 					</div>
-						<input type="button" id ='btnAbrir' value="Grafica Temperatura" onclick="ventanaNueva('/test/temperatura.php')" />
-					<input type="button" id ='btnAbrir' value="Grafica Humedad" onclick="ventanaNueva('/test/humedad.php')" />
-						<input type="button" id ='btnAbrir' value="Grafica Luz" onclick="ventanaNueva('/test/luz.php')" />
+							<table>
+							<tr>
+								<td> 	<input type="button" id ='btnAbrir' value="Grafica Temperatura" onclick="ventanaNueva('/test/temperatura.php')" /></td>
+								<td><input type="button" id ='btnAbrir' value="Grafica Humedad" onclick="ventanaNueva('/test/humedad.php')" /></td>
+								<td><input type="button" id ='btnAbrir' value="Grafica Luz" onclick="ventanaNueva('/test/luz.php')" /></td>
+							</tr>
+
+							<tr>
+								<td> 	<input type="button" id ='btnAbrir' value="G. Temperatura Min" onclick="ventanaNueva('/test/temperatura.php')" /></td>
+								<td><input type="button" id ='btnAbrir' value="G Temperatura Term Humed" onclick="ventanaNueva('/test/humedad.php')" /></td>
+								<td><input type="button" id ='btnAbrir' value="Consulta de Registros" onclick="ventanaNueva1('/Consulta/index.html')" /> </td>
+							</tr>
+							</table>
+
+					
+					
 						
-					<input type="button" id ='btnAbrir' value="Consulta de Registros" onclick="ventanaNueva1('/Consulta/index.html')" />	
+						
+						
 				</div>
 			</div>
 

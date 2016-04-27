@@ -15,7 +15,7 @@
 </tr>
 
 <?php  
-  $link = @mysql_connect("localhost", "root","hunterhacker")
+  $link = @mysql_connect("localhost", "root","utafisei")
       or die ("Error al conectar a la base de datos.");
   @mysql_select_db("datos", $link)
       or die ("Error al conectar a la base de datos.");

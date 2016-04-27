@@ -1,6 +1,6 @@
   $(document).ready(function() {
       console.log('Connecting...');
-     Server = new FancyWebSocket('ws://212.231.132.41:9300');
+     Server = new FancyWebSocket('ws://212.231.131.127:9300');
      //  Server = new FancyWebSocket('ws://192.168.0.11:9300');
 
 
@@ -27,6 +27,7 @@
       Server.bind('message', function( payload ) {
         var res = jQuery.parseJSON(payload);
 	
+  /*
 if(res.origen==="juanito") {
  $('#id_estacion').val(res.id_estacion);
     $('#lluvia').val(res.lluvia);
@@ -57,6 +58,8 @@ if(res.origen==="juanito") {
  //   $('#envio').html('');
        
      }
+
+*/
 
 $('#envio').html('');
 var hoy = new Date();

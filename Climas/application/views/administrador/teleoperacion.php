@@ -46,8 +46,8 @@ function ventanaNueva1(documento1){
 			<div class="panel-heading" style="background:#133A3A">
 
 			
-			<img src="http://212.231.132.41/Climas/img/38_logos-11.jpg" align="right"  width="260" height="100">
-			<img src="http://212.231.132.41/Climas/img/banderin.png" align="left"  width="100" height="110">
+			<img src="http://212.231.131.127/Climas/img/38_logos-11.jpg" align="right"  width="260" height="100">
+			<img src="http://212.231.131.127/Climas/img/banderin.png" align="left"  width="100" height="110">
 			<br>
 			<br>
 				<h2 span style="color:#FCFAFA"><b>Universidad Técnica de Ambato</b></h2>
@@ -66,80 +66,95 @@ CANTÓN RIOBAMBA DE LA PROVINCIA DE CHIMBORAZO.”</h4>
 					<div class="panel-heading">
 						 	Paramétros 
 					</div>
-					<div class="panel-body" id='parametros'>	
+					<div class="panel-body" id='parametros' style="height:300px;border:1px solid #ccc;font:16px/26px ;overflow:auto;">	
 
-					<TABLE BORDER="1" >
-
-
-						<tr>
-						  <td><strong>Parametro</strong></td>
-						  <td><strong>Valor</strong></td>						  
-						</tr>
-
-						 <tr>
-						  <td>Id Estacion</td>
-						  <td>	<input type="text" name="id_estacion" id ='id_estacion'> </td>						  
-						</tr>
-						
-						<tr>
-						  <td>Luvia</td>
-						  <td>  	<input type="text" name="lluvia" id ='lluvia'>	  </td>						  
-						</tr>
-						 
-						<tr>						
-						  <td>Velocidad de Viento </td>
-						  <td><input type="text" name="vviento" id ='vviento'></td>			  
-						</tr>
-						 
-						<tr>
-						  <td>Dirección de Viento</td>
-						  <td>
-						  	<input type="text" name="dviento" id ='dviento'>
-						  </td>
-						  
-						</tr>
-
-						<tr>
-						  <td>Temperatura</td>
-						  <td><input type="text" name="temperatura" id ='temperatura'>  </td>
-						  
-						</tr>
-				
-					<tr>
-						  <td>Presión Atmosferica</td>
-						  <td>
-						  	<input type="text" name="presion" id ='presion'>
-						  </td>
-						  
-						</tr>
-				
-					<tr>
-						  <td>Fecha</td>
-						  <td>
-						  	<input type="text" name="fecha" id ='fecha'>
-						  </td>
-						  
-						</tr>
-				
-					<tr>
-						  <td>Luz</td>
-						  <td>
-						  		<input type="text" name="luz" id ='luz'>
-						  </td>
-						  
-						</tr>
-					<tr>
-						  <td>Humedad</td>
-						  <td>
-						  		<input type="text" name="humedad" id ='humedad'>
-						  </td>
-						  
-						</tr>
-
-						
+<table border="2"><tr>
+<td><font face="verdana"><b>Parametro</b></font></td>
+<td><font face="verdana"><b>Valor</b></font></td>
 
 
-					</TABLE>
+
+
+</tr>
+
+<?php  
+$url1=$_SERVER['REQUEST_URI'];	 
+
+	header("Refresh: 5; URL=$url1");
+
+  $link = @mysql_connect("localhost", "root","utafisei")
+      or die ("Error al conectar a la base de datos.");
+  @mysql_select_db("datos", $link)
+      or die ("Error al conectar a la base de datos.");
+
+
+
+$query = "SELECT id_estacion, lluvia, vel_viento, dir_viento, temper, pres_atm,  fecha, luz, humed  FROM mediciones WHERE fecha = (select MAX(fecha) from mediciones)  ";
+
+
+
+
+
+$result = mysql_query($query);
+
+  $numero = 0;
+    while ($row = mysql_fetch_row($result)){
+echo "<tr>
+              <td>Id Estacion</td>
+              <td>".$row[0]."  </td>   </tr>  ";
+echo "<tr>
+              <td>Luvia</td>
+              <td>". $row[1]."    </td>             
+            </tr>";
+echo "<tr>            
+              <td>Velocidad de Viento </td>
+              <td> ". $row[2]."  </td>       
+            </tr>";
+echo "<tr>
+              <td>Dirección de Viento</td>
+              <td>". $row[3]."               </td>
+              
+            </tr>";
+
+echo"<tr>
+              <td>Temperatura</td>
+              <td>   ". $row[4]."</td>              
+            </tr>";
+echo "<tr>
+              <td>Presión Atmosferica</td>
+              <td> ". $row[5]."   </td>              
+            </tr>";
+
+echo "<tr>
+              <td>Fecha</td>
+              <td>". $row[6]."     </td>              
+            </tr>";
+
+echo"   <tr>
+              <td>Luz</td>
+              <td>
+                 ". $row[7]." 
+              </td>
+              
+            </tr>";
+echo "<tr>
+              <td>Humedad</td>
+              <td>
+                 ". $row[8]." 
+              </td>
+              
+            </tr>";
+    
+
+     
+
+    }
+
+  
+  mysql_free_result($result);
+  mysql_close($link);
+?>
+</table>
 
 
 					

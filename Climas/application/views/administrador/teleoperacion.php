@@ -89,7 +89,7 @@ $url1=$_SERVER['REQUEST_URI'];
 
 
 
-$query = "SELECT id_estacion, lluvia, vel_viento, dir_viento, temper, pres_atm,  fecha, luz, humed  FROM mediciones WHERE fecha = (select MAX(fecha) from mediciones)  ";
+$query = "SELECT id_estacion, lluvia, vel_viento, dir_viento, temper, pres_atm,  fecha, luz, humed, Temper_th  FROM mediciones WHERE fecha = (select MAX(fecha) from mediciones)  ";
 
 
 
@@ -144,6 +144,14 @@ echo "<tr>
               </td>
               
             </tr>";
+
+ echo "<tr>
+              <td>Termometro Humedo</td>
+              <td>
+                 ". $row[9]." 
+              </td>
+              
+            </tr>";     
     
 
      
@@ -164,6 +172,10 @@ echo "<tr>
 								<td> 	<input type="button" id ='btnAbrir' value="Grafica Temperatura" onclick="ventanaNueva('/test/temperatura.php')" /></td>
 								<td><input type="button" id ='btnAbrir' value="Grafica Humedad" onclick="ventanaNueva('/test/humedad.php')" /></td>
 								<td><input type="button" id ='btnAbrir' value="Grafica Luz" onclick="ventanaNueva('/test/luz.php')" /></td>
+
+							</tr>
+							<tr>
+								<td><br></td>
 							</tr>
 
 							<tr>

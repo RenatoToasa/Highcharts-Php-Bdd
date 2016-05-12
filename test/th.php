@@ -97,7 +97,7 @@ $(function () {
                 }
             },
             title: {
-                text: 'Grafica de Termometro Humedo'
+                text: 'Gráfica de Termómetro Húmedo'
             },
             xAxis: {
                 type: 'datetime',

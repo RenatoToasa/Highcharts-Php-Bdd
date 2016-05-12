@@ -66,10 +66,11 @@ CANTÓN RIOBAMBA DE LA PROVINCIA DE CHIMBORAZO.”</h4>
 					<div class="panel-heading">
 						 	Paramétros 
 					</div>
-					<div class="panel-body" id='parametros' style="height:300px;border:1px solid #ccc;font:16px/26px ;overflow:auto;">	
-
+					<div class="panel-body" id='parametros' style="height:450px;border:1px solid #ccc;font:16px/26px ;overflow:auto;">	
+<h4>Útimos datos Registrados</h4>
+<br>
 <table border="2"><tr>
-<td><font face="verdana"><b>Parametro</b></font></td>
+<td><font face="verdana"><b>Parámetro</b></font></td>
 <td><font face="verdana"><b>Valor</b></font></td>
 
 
@@ -82,7 +83,7 @@ $url1=$_SERVER['REQUEST_URI'];
 
 	header("Refresh: 5; URL=$url1");
 
-  $link = @mysql_connect("localhost", "root","utafisei")
+  $link = @mysql_connect("localhost", "root","hunterhacker")
       or die ("Error al conectar a la base de datos.");
   @mysql_select_db("datos", $link)
       or die ("Error al conectar a la base de datos.");
@@ -100,7 +101,7 @@ $result = mysql_query($query);
   $numero = 0;
     while ($row = mysql_fetch_row($result)){
 echo "<tr>
-              <td>Id Estacion</td>
+              <td>Id Estación</td>
               <td>".$row[0]."  </td>   </tr>  ";
 echo "<tr>
               <td>Luvia</td>
@@ -146,7 +147,7 @@ echo "<tr>
             </tr>";
 
  echo "<tr>
-              <td>Termometro Humedo</td>
+              <td>Termómetro Húmedo</td>
               <td>
                  ". $row[9]." 
               </td>
@@ -163,31 +164,67 @@ echo "<tr>
   mysql_close($link);
 ?>
 </table>
+<br>
+<h4>Temperatura aproximada de mañana</h4>
+<br>
+<!-- CONSULTA PREDICCION-->
 
+
+<table border="2"><tr>
+<td><font face="verdana"><b>Parámetro</b></font></td>
+<td><font face="verdana"><b>Porcentaje</b></font></td>
+
+
+
+
+</tr>
+
+<?php  
+$url1=$_SERVER['REQUEST_URI'];	 
+
+	header("Refresh: 5; URL=$url1");
+
+  $link = @mysql_connect("localhost", "root","hunterhacker")
+      or die ("Error al conectar a la base de datos.");
+  @mysql_select_db("datos", $link)
+      or die ("Error al conectar a la base de datos.");
+
+
+
+$query = "SELECT prediccion  FROM prediccion WHERE fecha = (select MAX(fecha) from prediccion)  ";
+
+
+
+
+
+$result = mysql_query($query);
+
+  $numero = 0;
+    while ($row = mysql_fetch_row($result)){
+echo "<tr>
+              <td>Prediccion Temperatura</td>
+              <td>".$row[0]."  </td>   </tr>  ";
+    
+
+     
+
+    }
+
+  
+  mysql_free_result($result);
+  mysql_close($link);
+?>
+
+
+</table>
+
+
+
+<!-- FIN CONSULTA PREDICCION-->
 
 					
-					</div>
-							<table>
-							<tr>
-								<td> 	<input type="button" id ='btnAbrir' value="Grafica Temperatura" onclick="ventanaNueva('/test/temperatura.php')" /></td>
-								<td><input type="button" id ='btnAbrir' value="Grafica Humedad" onclick="ventanaNueva('/test/humedad.php')" /></td>
-								<td><input type="button" id ='btnAbrir' value="Grafica Luz" onclick="ventanaNueva('/test/luz.php')" /></td>
-
-							</tr>
-							<tr>
-								<td><br></td>
-							</tr>
-
-							<tr>
-								<td> 	<input type="button" id ='btnAbrir' value="G. Temperatura Min" onclick="ventanaNueva('/test/temperatura.php')" /></td>
-								<td><input type="button" id ='btnAbrir' value="G Temperatura Term Humed" onclick="ventanaNueva('/test/humedad.php')" /></td>
-								<td><input type="button" id ='btnAbrir' value="Consulta de Registros" onclick="ventanaNueva1('/Consulta/index.html')" /> </td>
-							</tr>
-							</table>
-
-					
-					
-						
+					</div>	
+									
 						
 						
 				</div>
@@ -201,7 +238,7 @@ echo "<tr>
 												Datos Obtenidos por el INIAP Y MAGAP
 					
 						</div>
-						<div class="panel-body" id='estado' name = 'estado' style="height:377px;border:1px solid #ccc;font:16px/26px ;overflow:auto;">	
+						<div class="panel-body" id='estado' name = 'estado' style="height:450px;border:1px solid #ccc;font:16px/26px ;overflow:auto;">	
 
 						<h4>OMICETO Y HONGOS	</h4>						
 <strong>10.- Phytophthora infestans "Lancha negra, tizón tardío o gota"</strong>
@@ -267,9 +304,9 @@ echo "<tr>
 				
 					
 						</div>
-						<div class="panel-body" id='estado' name = 'estado'>	
+						<div class="panel-body" id='estado' name = 'estado' style="height:300px;border:1px solid #ccc;font:16px/26px ;overflow:auto;">
 
-				
+										
 										
 						</div>
 				
@@ -281,6 +318,45 @@ echo "<tr>
 
 <br>
 <br>
+
+
+
+<div class="row" >
+				<div class="col-lg-4"  >
+					<div class="panel panel-default"  >
+						<div class="panel-heading"  >
+							Gráficas y Consulta de Registros
+							
+					
+						</div>
+						<div class="panel-body" id='envio' name = 'envio' >	
+						<table>
+                                                        <tr>
+                                                                <td>    <input type="button" id ='btnAbrir' value="Temperatura" onclick="ventanaNueva('/test/temperatura.php')" /></td>
+                                                                <td><input type="button" id ='btnAbrir' value="Gráfica Humedad" onclick="ventanaNueva('/test/humedad.php')" /></td>
+                                                                <td><input type="button" id ='btnAbrir' value="Gráfica Luz" onclick="ventanaNueva('/test/luz.php')" /></td>
+                                                                
+
+
+                                                        </tr>
+                                                        <tr>
+                                                                <td><br></td>
+                                                        </tr>
+
+                                                        <tr>
+								 <td>    <input type="button" id ='btnAbrir' value=" Temperatura Mínima" onclick="ventanaNueva('/test/temp_min.php')" /></td>
+                                                                <td><input type="button" id ='btnAbrir' value="Termómetro Húmedo" onclick="ventanaNueva('/test/th.php')" /></td>
+                                                                <td><input type="button" id ='btnAbrir' value="Consulta de Registros" onclick="ventanaNueva1('/Consulta/index.html')" /> </td>
+                                                        </tr>
+                                                        </table>
+
+				
+										
+						</div>
+				
+					</div>
+				</div>
+
 
 <div class="row" style='display:none;' >
 				<div class="col-lg-5"  >
@@ -302,6 +378,13 @@ echo "<tr>
 
 
 
+	
+	
+		
+			
+			
+
+
 
 
 		</div>
@@ -323,9 +406,6 @@ echo "<tr>
 		</div>
 	</div>
 </div>
-
-
-
 
 </body>
 </html>

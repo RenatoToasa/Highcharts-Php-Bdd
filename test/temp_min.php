@@ -48,7 +48,7 @@
     }
  
     //Sentencia SQL
-$sql = "SELECT humed from mediciones;";
+$sql = "SELECT temp_min, fecha from prediccion;";
 //Array Multidimensional
 $rawdata = getArraySQL($sql);
  
@@ -97,7 +97,7 @@ $(function () {
                 }
             },
             title: {
-                text: 'Gráfica de Humedad'
+                text: 'Gráfica de Temperatura Mínima'
             },
             xAxis: {
                 type: 'datetime',
@@ -105,7 +105,7 @@ $(function () {
             },
             yAxis: {
                 title: {
-                    text: 'Valores Humedad'
+                    text: 'Valores de Temperatura Mínima'
                 },
                 plotLines: [{
                     value: 0,
@@ -127,16 +127,16 @@ $(function () {
                 enabled: true
             },
             series: [{
-                name: 'humedad',
-                     data: (function() {
-                        var data = [];
+                name: 'Temperatura ',
+                data: (function() {
+                   var data = [];
                     <?php
                         for($i = 0 ;$i<count($rawdata);$i++){
                     ?>
-                    data.push([<?php echo $rawdata[$i]["fecha"];?>,<?php echo $rawdata[$i]["humed"];?>]);
+                    data.push([<?php echo $rawdata[$i]["fecha"];?>,<?php echo $rawdata[$i]["temper"];?>]);
                     <?php } ?>
                 return data;
-                     })() 
+                })()
             }]
         });
     });

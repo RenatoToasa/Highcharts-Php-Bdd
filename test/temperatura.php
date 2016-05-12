@@ -97,7 +97,7 @@ $(function () {
                 }
             },
             title: {
-                text: 'Grafico de Temperatura'
+                text: 'Gráfica de Temperatura'
             },
             xAxis: {
                 type: 'datetime',

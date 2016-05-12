@@ -97,7 +97,7 @@ $(function () {
                 }
             },
             title: {
-                text: 'Grafica de Luz'
+                text: 'Gráfica de Luz'
             },
             xAxis: {
                 type: 'datetime',

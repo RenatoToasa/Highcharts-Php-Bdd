@@ -66,7 +66,7 @@ CANTÓN RIOBAMBA DE LA PROVINCIA DE CHIMBORAZO.”</h4>
 					<div class="panel-heading">
 						 	Paramétros 
 					</div>
-					<div class="panel-body" id='parametros' style="height:450px;border:1px solid #ccc;font:16px/26px ;overflow:auto;">	
+					<div class="panel-body" id='parametros' style="height:550px;border:1px solid #ccc;font:16px/26px ;overflow:auto;">	
 <h4>Útimos datos Registrados</h4>
 <br>
 <table border="2"><tr>
@@ -238,7 +238,7 @@ echo "<tr>
 												Datos Obtenidos por el INIAP Y MAGAP
 					
 						</div>
-						<div class="panel-body" id='estado' name = 'estado' style="height:450px;border:1px solid #ccc;font:16px/26px ;overflow:auto;">	
+						<div class="panel-body" id='estado' name = 'estado' style="height:550px;border:1px solid #ccc;font:16px/26px ;overflow:auto;">	
 
 						<h4>OMICETO Y HONGOS	</h4>						
 <strong>10.- Phytophthora infestans "Lancha negra, tizón tardío o gota"</strong>
@@ -304,7 +304,7 @@ echo "<tr>
 				
 					
 						</div>
-						<div class="panel-body" id='estado' name = 'estado' style="height:300px;border:1px solid #ccc;font:16px/26px ;overflow:auto;">
+						<div class="panel-body" id='estado' name = 'estado' style="height:325px;border:1px solid #ccc;font:16px/26px ;overflow:auto;">
 
 										
 										
@@ -329,22 +329,27 @@ echo "<tr>
 							
 					
 						</div>
-						<div class="panel-body" id='envio' name = 'envio' >	
+						<div class="panel-body" id='grafica' name = 'grafica' >	
 						<table>
                                                         <tr>
                                                                 <td>    <input type="button" id ='btnAbrir' value="Temperatura" onclick="ventanaNueva('/test/temperatura.php')" /></td>
                                                                 <td><input type="button" id ='btnAbrir' value="Gráfica Humedad" onclick="ventanaNueva('/test/humedad.php')" /></td>
-                                                                <td><input type="button" id ='btnAbrir' value="Gráfica Luz" onclick="ventanaNueva('/test/luz.php')" /></td>
                                                                 
-
-
+                                                                
                                                         </tr>
+							<tr>
+							<td><br></td>
+							</tr>
+							<tr>
+								 <td><input type="button" id ='btnAbrir' value="Gráfica Luz" onclick="ventanaNueva('/test/luz.php')" /></td>
+								 <td>    <input type="button" id ='btnAbrir' value=" Temperatura Mínima" onclick="ventanaNueva('/test/temp_min.php')" /></td>
+							</tr>
                                                         <tr>
                                                                 <td><br></td>
                                                         </tr>
 
                                                         <tr>
-								 <td>    <input type="button" id ='btnAbrir' value=" Temperatura Mínima" onclick="ventanaNueva('/test/temp_min.php')" /></td>
+								
                                                                 <td><input type="button" id ='btnAbrir' value="Termómetro Húmedo" onclick="ventanaNueva('/test/th.php')" /></td>
                                                                 <td><input type="button" id ='btnAbrir' value="Consulta de Registros" onclick="ventanaNueva1('/Consulta/index.html')" /> </td>
                                                         </tr>

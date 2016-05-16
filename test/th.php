@@ -134,7 +134,7 @@ $(function () {
                     <?php
                         for($i = 0 ;$i<count($rawdata);$i++){
                     ?>
-                    data.push([<?php echo $rawdata[$i]["fecha"];?>,<?php echo $rawdata[$i]["luz"];?>]);
+                    data.push([<?php echo $rawdata[$i]["fecha"];?>,<?php echo $rawdata[$i]["Temper_th"];?>]);
                     <?php } ?>
                 return data;
                      })()     

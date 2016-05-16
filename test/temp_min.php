@@ -133,7 +133,7 @@ $(function () {
                     <?php
                         for($i = 0 ;$i<count($rawdata);$i++){
                     ?>
-                    data.push([<?php echo $rawdata[$i]["fecha"];?>,<?php echo $rawdata[$i]["temper"];?>]);
+                    data.push([<?php echo $rawdata[$i]["fecha"];?>,<?php echo $rawdata[$i]["temp_min"];?>]);
                     <?php } ?>
                 return data;
                 })()

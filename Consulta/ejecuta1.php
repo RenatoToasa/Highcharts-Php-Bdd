@@ -1,6 +1,6 @@
 <table border="1" cellspacing=1 cellpadding=2 style="font-size: 8pt"><tr>
 <td><font face="verdana"><b>Id Estacion</b></font></td>
-<td><font face="verdana"><b>Id Secuencial</b></font></td>
+<td><font face="verdana"><b>T. Minima</b></font></td>
 <td><font face="verdana"><b>Lluvia</b></font></td>
 <td><font face="verdana"><b>Vel Viento</b></font></td>
 <td><font face="verdana"><b>Dir_Viento</b></font></td>
@@ -9,6 +9,8 @@
 <td><font face="verdana"><b>Fecha</b></font></td>
 <td><font face="verdana"><b>Luz</b></font></td>
 <td><font face="verdana"><b>Humedad</b></font></td>
+
+
 
 
 
@@ -23,7 +25,7 @@
 
 
 
-$query = "SELECT id_estacion, id_sec, lluvia, vel_viento, dir_viento, temper, pres_atm,  fecha, luz, humed  FROM mediciones WHERE fecha between '"
+$query = "SELECT id_estacion, temp_min_act, lluvia, vel_viento, dir_viento, temper, pres_atm,  fecha, luz, humed  FROM mediciones WHERE fecha between '"
       .$_POST['datepicker'].":00:00:00' and '".$_POST['datepicker'].":23:59:59'   ";
 
 
@@ -51,7 +53,10 @@ echo "<tr><td width=\"5%\"><font face=\"verdana\">" .
     echo "<td width=\"5%\"><font face=\"verdana\">" .
             $row[8]. "</font></td>";
     echo "<td width=\"5%\"><font face=\"verdana\">" .
-            $row[9]. "</font></td></tr>";
+            $row[9]. "</font></td>
+ 
+
+</tr>";
 
 
     $numero++;

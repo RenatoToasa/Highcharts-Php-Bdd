@@ -81,7 +81,7 @@ CANTÓN RIOBAMBA DE LA PROVINCIA DE CHIMBORAZO.”</h4>
 <?php  
 $url1=$_SERVER['REQUEST_URI'];	 
 
-	header("Refresh: 5; URL=$url1");
+	header("Refresh: 15; URL=$url1");
 
   $link = @mysql_connect("localhost", "root","hunterhacker")
       or die ("Error al conectar a la base de datos.");
@@ -165,7 +165,7 @@ echo "<tr>
 ?>
 </table>
 <br>
-<h4>Temperatura aproximada de mañana</h4>
+<h4>Temperatura minima aproximada de mañana</h4>
 <br>
 <!-- CONSULTA PREDICCION-->
 
@@ -182,7 +182,7 @@ echo "<tr>
 <?php  
 $url1=$_SERVER['REQUEST_URI'];	 
 
-	header("Refresh: 5; URL=$url1");
+	header("Refresh:15; URL=$url1");
 
   $link = @mysql_connect("localhost", "root","hunterhacker")
       or die ("Error al conectar a la base de datos.");
@@ -299,14 +299,14 @@ echo "<tr>
 				<div class="col-lg-4">
 					<div class="panel panel-default">
 						<div class="panel-heading">
-							Resultados Obtenidos
+							Consulta de Registros
 
 				
 					
 						</div>
 						<div class="panel-body" id='estado' name = 'estado' style="height:325px;border:1px solid #ccc;font:16px/26px ;overflow:auto;">
 
-										
+							<object data="http://212.231.131.127/Consulta/index.html" width="400" height="300">     <embed wmode="transparent" src="http://212.231.131.127/Consulta/index.html" width="400" height="300" /> Error: Embedded data could not be displayed. </object>										
 										
 						</div>
 				
@@ -351,7 +351,7 @@ echo "<tr>
                                                         <tr>
 								
                                                                 <td><input type="button" id ='btnAbrir' value="Termómetro Húmedo" onclick="ventanaNueva('/test/th.php')" /></td>
-                                                                <td><input type="button" id ='btnAbrir' value="Consulta de Registros" onclick="ventanaNueva1('/Consulta/index.html')" /> </td>
+                                                                
                                                         </tr>
                                                         </table>
 
